@@ -1,0 +1,32 @@
+[project]
+name = "todo-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "puild>=0.1.1",
+    "robotcode[analyze,runner]>=2.7.0",
+    "sqlmodel>=0.0.47",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "backend"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[project.scripts]
+build = "build:build"
+run = "build:run"
+clean = "build:clean"
+
+[tool.fastapi]
+entrypoint = "backend.main:app"
