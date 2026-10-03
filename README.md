@@ -8,6 +8,8 @@ To build and run the project: `uv run app`
 To test the project: `uv run test all` (or run `uv run test` and follow instructions on how to test diffrent suites)  
 To clean thing up: `uv run clean`  
 
+The build and test artifacts are in `build/`
+
 # Stacks
 - backend: fastapi
 - frontend: Nextjs
