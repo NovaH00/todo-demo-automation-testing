@@ -47,7 +47,9 @@ def check_health() -> dict[str, str]:
 
 
 # Serve built Next.js static output if present
-frontend_dir = Path(__file__).resolve().parent.parent / "frontend" / "out"
+frontend_dir = Path(__file__).resolve().parent.parent.parent / "build" / "frontend"
+if not frontend_dir.exists():
+    frontend_dir = Path(__file__).resolve().parent.parent / "frontend" / "out"
 if frontend_dir.exists():
     app.frontend("/", directory=frontend_dir)
 

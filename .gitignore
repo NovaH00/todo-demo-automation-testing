@@ -12,3 +12,4 @@ wheels/
 # Database and test artifacts
 *.db
 .pytest_cache/
+results/

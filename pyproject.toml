@@ -21,12 +21,14 @@ module-name = "backend"
 [dependency-groups]
 dev = [
     "pytest>=9.1.1",
+    "robotframework-browser>=20.5.0",
 ]
 
 [project.scripts]
 build = "build:build"
-run = "build:run"
+app = "build:run"
 clean = "build:clean"
+test = "test:main"
 
 [tool.fastapi]
 entrypoint = "backend.main:app"
