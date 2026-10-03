@@ -1,3 +1,5 @@
+# A simple todo app for demonstrating robotcode testing framework
+
 # Stacks
 - backend: fastapi
 - frontend: Probably nextjs
